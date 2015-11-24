@@ -1,11 +1,18 @@
-# README #
+# Nexxus Marketing API Documentation Samples #
 
-Nexxus Marketing API documentation samples.
 This repository contains code samples used in the Nexxus Marketing API documentation.
 http://nexxusdocs.imshealth.com/nexxusmarketing/api2/default.htm.
 
+##License##
 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-### Contact ###
+## Contact ##
 
 * chrisrees@us.imshealth.com
