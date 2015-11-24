@@ -1,0 +1,89 @@
+<!--=====================================================================-->
+<!--=																	=-->
+<!--= Copyright (c) 2015 IMS Health Incorporated. All rights reserved.  =-->
+<!--=																	=-->
+<!--=====================================================================-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Nexus Web Tracker Samples</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href="css/lightbox.css" rel="stylesheet" />
+	</head>
+	<body>
+		<script>
+		var baseUrl = window.location.href.split('/').slice(0,3) + '/';
+		</script>
+
+	  <h1>Web Tracker Examples</h1>
+		<h2>External Links</h2>
+		<p>This is a link to an external website: <a target="_blank" onclick="aatracker.track(baseUrl + '#imshealth');"
+			href="http://www.imshealth.com">IMS Health</a> </p>
+		<p>This is a link to an external website: <a target="_blank" onclick="aatracker.track(baseUrl + '#devblog');"
+			href="http://dev.imshealth.com">IMS Health Developer Blog</a> </p>
+		<p>This is a link to an external website: <a target="_blank" onclick="aatracker.track(baseUrl + '#nexxusmarketingdevdoc');"
+			href="http://nexxusdocs.imshealth.com/nexxusmarketing/api2/default.htm">Nexxus Marketing API Documentation</a> </p>
+
+		<h2>Overlays</h2>
+		<p>This content is displayed as an overlay:
+		<a href="images/connected.jpg" rel="lightbox"
+			onclick="aatracker.track(location.href + '?overlay=true');"
+			title="Sample overlay">image</a>.</p>
+
+		<h2>PDF Files</h2>
+		<p>This is a link to a PDF: <a href="downloads/NexusAPIUserGuide.pdf" target="_blank"
+		onclick="aatracker.track(baseUrl + 'downloads/nmwhitepaper.pdf');">IMS Health Whitepaper</a>.</p>
+
+		<h2>Videos</h2>
+		<div class="post">
+			<div class="header">
+				<p>Embedded video can be tracked:</p>
+			</div>
+			<div class="content">
+				<div id="playerdiv"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://c.appatureinc.com/aa/1048579/script"></script>
+		<script type="text/javascript">aatracker.track();</script>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/lightbox.js"></script>
+		<!--<script src="jquery-2.1.0.min.js"></script>
+		<script src="app.js"></script> -->
+		<script>
+		  var tag = document.createElement('script');
+		  tag.src = "//www.youtube.com/iframe_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		  var player;
+		  function onYouTubeIframeAPIReady() {
+		    player = new YT.Player('playerdiv', {
+		      height: '356',
+		      width: '425',
+		      videoId: 'adBZjLBpWKA',
+		      events: {
+		        'onStateChange': onPlayerStateChange
+		      }
+		    });
+		  }
+
+		  var timer;
+		  function onPlayerStateChange(event) {
+		    if (event.data == YT.PlayerState.PLAYING && !timer) {
+		      timer = setInterval(trackPlayback, 1000);
+		    } else if ((event.data == YT.PlayerState.ENDED ||
+		                event.data == YT.PlayerState.PAUSED) && timer) {
+		      clearInterval(timer);
+		      timer = null;
+		    }
+		  }
+
+		  function trackPlayback() {
+		    var playbackPoint = player.getCurrentTime();
+		    aatracker.track(location.href + '?videoplayback=' + playbackPoint);
+		  }
+		</script>
+	</body>
+</html>
