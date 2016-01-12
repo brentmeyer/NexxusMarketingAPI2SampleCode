@@ -1,0 +1,24 @@
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\bin\Debug\NexxusMarketingSOAPOperations.exe.config
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\bin\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\bin\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\obj\Debug\NexxusMarketingResourceOperations.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\obj\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\obj\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe.config
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingResourceOperations.csprojResolveAssemblyReference.cache
+C:\Users\crees\repos\nmresourceops\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe.config
+C:\Users\crees\repos\nmresourceops\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\crees\repos\nmresourceops\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\crees\repos\nmresourceops\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\crees\repos\nmresourceops\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\crees\repos\nmresourceops\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingResourceOperations.csprojResolveAssemblyReference.cache
+C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe.config
+C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingResourceOperations.csprojResolveAssemblyReference.cache
+C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.pdb

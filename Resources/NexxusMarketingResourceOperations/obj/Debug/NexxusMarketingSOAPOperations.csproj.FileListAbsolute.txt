@@ -1,0 +1,6 @@
+c:\users\chris\documents\visual studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\bin\Debug\NexxusMarketingSOAPOperations.exe.config
+c:\users\chris\documents\visual studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\bin\Debug\NexxusMarketingSOAPOperations.exe
+c:\users\chris\documents\visual studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\bin\Debug\NexxusMarketingSOAPOperations.pdb
+c:\users\chris\documents\visual studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\obj\Debug\NexxusMarketingSOAPOperations.exe
+c:\users\chris\documents\visual studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\obj\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\Chris\Documents\Visual Studio 2015\Projects\NexxusMarketingSOAPOperations\NexxusMarketingSOAPOperations\obj\Debug\NexxusMarketingSOAPOperations.csprojResolveAssemblyReference.cache
