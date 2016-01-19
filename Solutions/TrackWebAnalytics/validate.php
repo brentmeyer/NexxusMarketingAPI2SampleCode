@@ -67,7 +67,7 @@ function SmartMergeResource($clientObject, $parameters)
 	$id=0;
 
 	try {
-		$result = $clientObject->Create($parameters);
+		$result = $clientObject->SmartMerge($parameters);
 	}
 	catch (Exception $e) {
 		error_log( "Nexxus Marketing Registration sample: SOAP call SmartMerge failed - ".$e->getMessage() );
