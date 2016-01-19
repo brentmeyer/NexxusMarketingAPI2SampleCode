@@ -15,4 +15,4 @@ SOFTWARE.
 
 ## Contact ##
 
-* chrisrees@us.imshealth.com
+* crees@us.imshealth.com
