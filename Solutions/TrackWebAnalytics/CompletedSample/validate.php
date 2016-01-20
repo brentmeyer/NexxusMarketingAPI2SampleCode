@@ -67,7 +67,7 @@ function SmartMergeResource($clientObject, $parameters)
 	$id=0;
 
 	try {
-		$result = $clientObject->Create($parameters);
+		$result = $clientObject->SmartMerge($parameters);
 	}
 	catch (Exception $e) {
 		error_log( "Nexxus Marketing Registration sample: SOAP call SmartMerge failed - ".$e->getMessage() );
@@ -341,7 +341,7 @@ function SmartMergeContact($client)
 	// Use the default merge configuration
 		$result = SmartMergeResource($client,$parameters);
 	}
-	catch(Exeption $e){
+	catch(Exception $e){
 		error_log( "Nexxus Marketing Registration sample: Couldn't create contact - ".$e->getMessage());
 		throw new Exception("Could not register your contact details.");
 	}
