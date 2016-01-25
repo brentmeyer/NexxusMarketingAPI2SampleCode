@@ -6,4 +6,4 @@ Also includes samples of the various types of web tracking that can be performed
 
 ### Contact ###
 
-* Chris Rees - crees@us.imshealth.com
+* Chris Rees
