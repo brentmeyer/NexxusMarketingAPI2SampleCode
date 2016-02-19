@@ -1,6 +1,6 @@
 ﻿//===================================================================
 //=																	=
-//= Copyright (c) 2015 IMS Health Incorporated. All rights reserved.=
+//= Copyright (c) 2016 IMS Health Incorporated. All rights reserved.=
 //=																	=
 //===================================================================
 
@@ -12,6 +12,7 @@
 using System;
 using System.Configuration;
 using System.Net;
+using System.Collections.Generic;
 
 
 namespace NexxusMarketingAPISamples
@@ -22,11 +23,8 @@ namespace NexxusMarketingAPISamples
         {
             //Insert calling code here. Either call an updated ExerciseSOAPOperations or one of the Bulk functions below. 
 
-            Console.WriteLine("Done");
-            Console.ReadKey();
         }
 
-        //Sample code for calling SOAP operations - in this case Show.
 
     }
 

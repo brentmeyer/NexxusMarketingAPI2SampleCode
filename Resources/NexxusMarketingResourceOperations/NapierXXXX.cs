@@ -43,8 +43,6 @@ public partial class Napier : System.Web.Services.Protocols.SoapHttpClientProtoc
     
     private System.Threading.SendOrPostCallback DescribeOperationCompleted;
     
-    private System.Threading.SendOrPostCallback MergeExistingOperationCompleted;
-    
     private System.Threading.SendOrPostCallback DeleteOperationCompleted;
     
     private System.Threading.SendOrPostCallback ShowOperationCompleted;
@@ -53,7 +51,7 @@ public partial class Napier : System.Web.Services.Protocols.SoapHttpClientProtoc
     
     /// <remarks/>
     public Napier() {
-        this.Url = "https://ppeem.appature.com/api/Napier.asmx";
+        this.Url = "https://api.appatureinc.com/api/napier.asmx";
     }
     
     /// <remarks/>
@@ -79,9 +77,6 @@ public partial class Napier : System.Web.Services.Protocols.SoapHttpClientProtoc
     
     /// <remarks/>
     public event DescribeCompletedEventHandler DescribeCompleted;
-    
-    /// <remarks/>
-    public event MergeExistingCompletedEventHandler MergeExistingCompleted;
     
     /// <remarks/>
     public event DeleteCompletedEventHandler DeleteCompleted;
@@ -465,53 +460,6 @@ public partial class Napier : System.Web.Services.Protocols.SoapHttpClientProtoc
         if ((this.DescribeCompleted != null)) {
             System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
             this.DescribeCompleted(this, new DescribeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-        }
-    }
-    
-    /// <remarks/>
-    [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.appatureinc.com/api/napier/MergeExisting", RequestNamespace="http://www.appatureinc.com/api/napier", ResponseNamespace="http://www.appatureinc.com/api/napier", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-    public MergeExistingResponse MergeExisting(string TypeId, [System.Xml.Serialization.XmlArrayItemAttribute("MergeResource")] MergeSpecification[] MergeResources, string MergeConfigId) {
-        object[] results = this.Invoke("MergeExisting", new object[] {
-                    TypeId,
-                    MergeResources,
-                    MergeConfigId});
-        return ((MergeExistingResponse)(results[0]));
-    }
-    
-    /// <remarks/>
-    public System.IAsyncResult BeginMergeExisting(string TypeId, MergeSpecification[] MergeResources, string MergeConfigId, System.AsyncCallback callback, object asyncState) {
-        return this.BeginInvoke("MergeExisting", new object[] {
-                    TypeId,
-                    MergeResources,
-                    MergeConfigId}, callback, asyncState);
-    }
-    
-    /// <remarks/>
-    public MergeExistingResponse EndMergeExisting(System.IAsyncResult asyncResult) {
-        object[] results = this.EndInvoke(asyncResult);
-        return ((MergeExistingResponse)(results[0]));
-    }
-    
-    /// <remarks/>
-    public void MergeExistingAsync(string TypeId, MergeSpecification[] MergeResources, string MergeConfigId) {
-        this.MergeExistingAsync(TypeId, MergeResources, MergeConfigId, null);
-    }
-    
-    /// <remarks/>
-    public void MergeExistingAsync(string TypeId, MergeSpecification[] MergeResources, string MergeConfigId, object userState) {
-        if ((this.MergeExistingOperationCompleted == null)) {
-            this.MergeExistingOperationCompleted = new System.Threading.SendOrPostCallback(this.OnMergeExistingOperationCompleted);
-        }
-        this.InvokeAsync("MergeExisting", new object[] {
-                    TypeId,
-                    MergeResources,
-                    MergeConfigId}, this.MergeExistingOperationCompleted, userState);
-    }
-    
-    private void OnMergeExistingOperationCompleted(object arg) {
-        if ((this.MergeExistingCompleted != null)) {
-            System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-            this.MergeExistingCompleted(this, new MergeExistingCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
         }
     }
     
@@ -992,6 +940,66 @@ public partial class ShowResponse {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.appatureinc.com/api/napier")]
+public partial class IdOperationResult {
+    
+    private string errorMessageField;
+    
+    private bool operationSucceededField;
+    
+    private string errorStringField;
+    
+    private string idField;
+    
+    /// <remarks/>
+    public string ErrorMessage {
+        get {
+            return this.errorMessageField;
+        }
+        set {
+            this.errorMessageField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public bool OperationSucceeded {
+        get {
+            return this.operationSucceededField;
+        }
+        set {
+            this.operationSucceededField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string ErrorString {
+        get {
+            return this.errorStringField;
+        }
+        set {
+            this.errorStringField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Id {
+        get {
+            return this.idField;
+        }
+        set {
+            this.idField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.0.30319.33440")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.appatureinc.com/api/napier")]
 public partial class DeleteResponse {
     
     private string errorMessageField;
@@ -1055,256 +1063,6 @@ public partial class DeleteResponse {
         }
         set {
             this.errorStringField = value;
-        }
-    }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.0.30319.33440")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.appatureinc.com/api/napier")]
-public partial class IdOperationResult {
-    
-    private string errorMessageField;
-    
-    private bool operationSucceededField;
-    
-    private string errorStringField;
-    
-    private string idField;
-    
-    /// <remarks/>
-    public string ErrorMessage {
-        get {
-            return this.errorMessageField;
-        }
-        set {
-            this.errorMessageField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public bool OperationSucceeded {
-        get {
-            return this.operationSucceededField;
-        }
-        set {
-            this.operationSucceededField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string ErrorString {
-        get {
-            return this.errorStringField;
-        }
-        set {
-            this.errorStringField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Id {
-        get {
-            return this.idField;
-        }
-        set {
-            this.idField = value;
-        }
-    }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.0.30319.33440")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.appatureinc.com/api/napier")]
-public partial class MergeExistingResult {
-    
-    private IdOperationResult[] resultsField;
-    
-    private string errorMessageField;
-    
-    private string errorStringField;
-    
-    private bool operationSucceededField;
-    
-    private string winnerIdField;
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("Result")]
-    public IdOperationResult[] Results {
-        get {
-            return this.resultsField;
-        }
-        set {
-            this.resultsField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public string ErrorMessage {
-        get {
-            return this.errorMessageField;
-        }
-        set {
-            this.errorMessageField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public string ErrorString {
-        get {
-            return this.errorStringField;
-        }
-        set {
-            this.errorStringField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public bool OperationSucceeded {
-        get {
-            return this.operationSucceededField;
-        }
-        set {
-            this.operationSucceededField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string WinnerId {
-        get {
-            return this.winnerIdField;
-        }
-        set {
-            this.winnerIdField = value;
-        }
-    }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.0.30319.33440")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.appatureinc.com/api/napier")]
-public partial class MergeExistingResponse {
-    
-    private string errorMessageField;
-    
-    private MergeExistingResult[] resultsField;
-    
-    private bool batchCompletedField;
-    
-    private string requestIdField;
-    
-    private string errorStringField;
-    
-    /// <remarks/>
-    public string ErrorMessage {
-        get {
-            return this.errorMessageField;
-        }
-        set {
-            this.errorMessageField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("Result")]
-    public MergeExistingResult[] Results {
-        get {
-            return this.resultsField;
-        }
-        set {
-            this.resultsField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public bool BatchCompleted {
-        get {
-            return this.batchCompletedField;
-        }
-        set {
-            this.batchCompletedField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string RequestId {
-        get {
-            return this.requestIdField;
-        }
-        set {
-            this.requestIdField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string ErrorString {
-        get {
-            return this.errorStringField;
-        }
-        set {
-            this.errorStringField = value;
-        }
-    }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.0.30319.33440")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.appatureinc.com/api/napier")]
-public partial class MergeSpecification {
-    
-    private string externalIdNameField;
-    
-    private string winnerIdField;
-    
-    private string[] idsToMergeField;
-    
-    /// <remarks/>
-    public string ExternalIdName {
-        get {
-            return this.externalIdNameField;
-        }
-        set {
-            this.externalIdNameField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public string WinnerId {
-        get {
-            return this.winnerIdField;
-        }
-        set {
-            this.winnerIdField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public string[] IdsToMerge {
-        get {
-            return this.idsToMergeField;
-        }
-        set {
-            this.idsToMergeField = value;
         }
     }
 }
@@ -2306,32 +2064,6 @@ public partial class DescribeCompletedEventArgs : System.ComponentModel.AsyncCom
         get {
             this.RaiseExceptionIfNecessary();
             return ((DescribeResponse)(this.results[0]));
-        }
-    }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.0.30319.33440")]
-public delegate void MergeExistingCompletedEventHandler(object sender, MergeExistingCompletedEventArgs e);
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.0.30319.33440")]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-public partial class MergeExistingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-    
-    private object[] results;
-    
-    internal MergeExistingCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-            base(exception, cancelled, userState) {
-        this.results = results;
-    }
-    
-    /// <remarks/>
-    public MergeExistingResponse Result {
-        get {
-            this.RaiseExceptionIfNecessary();
-            return ((MergeExistingResponse)(this.results[0]));
         }
     }
 }

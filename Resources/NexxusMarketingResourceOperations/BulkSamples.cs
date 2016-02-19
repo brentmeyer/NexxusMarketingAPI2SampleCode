@@ -18,6 +18,5 @@ namespace NexxusMarketingAPISamples
     class BulkSamples
     {
 
-
     }
 }

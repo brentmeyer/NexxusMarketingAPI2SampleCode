@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AsyncBulkSample.cs" />
     <Compile Include="BulkSamples.cs" />
+    <Compile Include="Hydrate.cs" />
     <Compile Include="Napier.cs" />
     <Compile Include="NapierSamples.cs" />
     <Compile Include="Program.cs" />

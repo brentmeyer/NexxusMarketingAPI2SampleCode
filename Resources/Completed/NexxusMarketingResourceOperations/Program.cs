@@ -12,6 +12,7 @@
 using System;
 using System.Configuration;
 using System.Net;
+using System.Collections.Generic;
 
 
 namespace NexxusMarketingAPISamples
@@ -65,22 +66,28 @@ namespace NexxusMarketingAPISamples
         /// </summary>
         static void FindSingleResource()
         {
-            //  Find Single Resource
             string userName = ConfigurationManager.AppSettings["UserName"];
             string password = ConfigurationManager.AppSettings["Password"];
             string bulkURL = ConfigurationManager.AppSettings["BulkURL"];
+            string externalContactId = "IDX99";
+
             BulkSamples bulkSamples = new BulkSamples();
-            string query = "/api/bulk/2.0/find/Contact?fields=Id,FirstName,LastName,Email,Phone&query=ExternalContactId='<EXTERNALCONTACTID>'";
-            Resource resource=bulkSamples.WebClientFind(bulkURL + query, userName, password);
-            if (resource != null) {
-                foreach (var field in resource.Field)
-                {
+            string query = "/api/bulk/2.0/find/Contact?fields=Id, ExternalContactId,FirstName,LastName,Email,Phone&query=ExternalContactId='" + externalContactId + "'";
+
+            List<Resource> resources = bulkSamples.FindResources(bulkURL + query, userName, password);
+            if (resources.Count > 0) {
+                Resource resource = resources[0];  // ExternalContactId is unique, there will be one or zero resources returned.
+                foreach (var field in resource.Field) {
                     Console.WriteLine("Field: " + field.Id + " Value: " + field.Value);
                 }
             }
-            else{
-                    Console.WriteLine("Contact not found.");
-                }
+            else {
+                Console.WriteLine("Contact with ExternalContactId {0} could not be retrieved or does not exist.", externalContactId);
+            }
+
+            Console.WriteLine("Done");
+            Console.ReadKey();
+
         }
         /// <summary>
         /// Sample code for querying multiple resources and storing the results in a file.

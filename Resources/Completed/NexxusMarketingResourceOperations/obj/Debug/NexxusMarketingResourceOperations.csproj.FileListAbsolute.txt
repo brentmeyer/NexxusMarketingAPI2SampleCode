@@ -22,3 +22,8 @@ C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\Completed\Nexxus
 C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\Completed\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe
 C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\Completed\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.pdb
 C:\Users\crees\repos\nexxus-marketing-api-doc-samples\Resources\Completed\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingResourceOperations.csprojResolveAssemblyReference.cache
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Resources\Completed\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe.config
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Resources\Completed\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Resources\Completed\NexxusMarketingResourceOperations\bin\Debug\NexxusMarketingSOAPOperations.pdb
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Resources\Completed\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.exe
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Resources\Completed\NexxusMarketingResourceOperations\obj\Debug\NexxusMarketingSOAPOperations.pdb

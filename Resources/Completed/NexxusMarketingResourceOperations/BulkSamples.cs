@@ -17,82 +17,44 @@ namespace NexxusMarketingAPISamples
 {
     class BulkSamples
     {
-        public Resource WebClientFind(string url, string userName, string password)
-        {
-            Resource resource = null;
+        public List<Resource> FindResources(string url, string userName, string password) {
+            List<Resource> resources = new List<Resource>();
             WebClient wc = new WebClient();
-            WebHeaderCollection headers = null;
+
             //Set up basic authorization.
             var credential = userName + ":" + password;
             wc.Headers["Authorization"] =
                 "Basic " +
                 Convert.ToBase64String(Encoding.UTF8.GetBytes(credential));
 
-            try{
+            try {
                 //Make the query and download to file.
-                string result=wc.DownloadString(url);
-                resource = HydrateBulkResource(result);
-                headers = wc.ResponseHeaders;
+                string result = wc.DownloadString(url);
+                resources = Hydrate.HydrateBulkResources(result);
+
+                if (resources.Count == 0) {
+                    Console.WriteLine("No resource(s) in the query were found  - " + url);
+                }
             }
-            catch (WebException e){
-                if (e.Status == WebExceptionStatus.ProtocolError){
+            catch (WebException e) {
+                if (e.Status == WebExceptionStatus.ProtocolError) {
                     string nexxusErrorString = e.Response.Headers["NexusErrorString"];
 
-                    if (nexxusErrorString != null)
-                    {
+                    if (nexxusErrorString != null) {
                         Console.WriteLine("Nexxus Error Message : " + nexxusErrorString);
+                    }
+                    else {
                     }
                     Console.WriteLine("Operation Failed : " + e.Message);
                 }
-                else{
+                else {
                     Console.WriteLine(e.Message);
                 }
             }
-            catch (Exception e){
+            catch (Exception e) {
                 Console.WriteLine(e.Message);
-
             }
-            return resource;
-        }
-
-
-        protected Resource HydrateBulkResource(String result)
-        {
-            Resource resource = null; 
-            //Break result into string array - one item for each resource.
-            char[] delimiters = new char[] { '\r', '\n' };
-
-            string[] resourceStrings = result.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
-            string[] resourceColumns = null;
-
-            //Only return the first resource in result set.
-            //Row 0 is headers. Row 1 is field values.
-            for (int n = 0; n <=1; n++){
-                //Break resources fields into an array. Pipe | delimiter for each field.
-                char[] fieldDelimiters = new char[] { '|' };
-                string[] resourceFields = resourceStrings[n].Split(fieldDelimiters);
-
-                //Get rid of any quotes 
-                for (int i = 0; i < resourceFields.Count(); i++){
-                    resourceFields[i] = resourceFields[i].Trim(new char[] { '"' });
-                }
-                // Extract headers from first row
-                if (n == 0){
-                    resourceColumns = resourceFields;
-                    continue;
-                }
-                // build a Resource from second row
-                FieldValuePair[] fvp = new FieldValuePair[resourceColumns.Count()];
-                for (int i = 0; i < resourceColumns.Count(); i++){
-                    fvp[i] = new FieldValuePair();
-                    fvp[i].Id = resourceColumns[i];
-                    fvp[i].Value = resourceFields[i];
-                }
-                resource = new Resource{
-                    Field = fvp
-                };        
-            }
-            return resource;
+            return resources;
         }
 
         public void WebClientFindToFile(string url, string userName, string password)
