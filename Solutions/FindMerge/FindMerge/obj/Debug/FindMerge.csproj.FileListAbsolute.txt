@@ -1,0 +1,19 @@
+C:\Users\crees\Documents\Visual Studio 2013\Projects\FindMerge\FindMerge\bin\Debug\FindMerge.exe.config
+C:\Users\crees\Documents\Visual Studio 2013\Projects\FindMerge\FindMerge\bin\Debug\FindMerge.exe
+C:\Users\crees\Documents\Visual Studio 2013\Projects\FindMerge\FindMerge\bin\Debug\FindMerge.pdb
+C:\Users\crees\Documents\Visual Studio 2013\Projects\FindMerge\FindMerge\obj\Debug\FindMerge.exe
+C:\Users\crees\Documents\Visual Studio 2013\Projects\FindMerge\FindMerge\obj\Debug\FindMerge.pdb
+C:\Users\crees\Documents\Visual Studio 2013\Projects\FindMerge\FindMerge\obj\Debug\FindMerge.csprojResolveAssemblyReference.cache
+F:\FindMerge\FindMerge\bin\Debug\FindMerge.exe.config
+C:\Users\crees\gitlab\FindMerge\FindMerge\bin\Debug\FindMerge.exe.config
+C:\Users\crees\gitlab\FindMerge\FindMerge\obj\Debug\FindMerge.exe
+C:\Users\crees\gitlab\FindMerge\FindMerge\obj\Debug\FindMerge.pdb
+C:\Users\crees\gitlab\FindMerge\FindMerge\bin\Debug\FindMerge.exe
+C:\Users\crees\gitlab\FindMerge\FindMerge\bin\Debug\FindMerge.pdb
+C:\Users\crees\gitlab\FindMerge\FindMerge\obj\Debug\FindMerge.csprojResolveAssemblyReference.cache
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Solutions\FindMerge\FindMerge\bin\Debug\FindMerge.exe.config
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Solutions\FindMerge\FindMerge\obj\Debug\FindMerge.exe
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Solutions\FindMerge\FindMerge\obj\Debug\FindMerge.pdb
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Solutions\FindMerge\FindMerge\bin\Debug\FindMerge.exe
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Solutions\FindMerge\FindMerge\bin\Debug\FindMerge.pdb
+C:\Users\crees\gitlab\nexxus_marketing_api_documentation_samples\Solutions\FindMerge\FindMerge\obj\Debug\FindMerge.csprojResolveAssemblyReference.cache

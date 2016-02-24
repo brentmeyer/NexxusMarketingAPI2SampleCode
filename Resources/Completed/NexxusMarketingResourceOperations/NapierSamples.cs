@@ -419,6 +419,44 @@ namespace NexxusMarketingAPISamples {
             }
         }
 
+        public void MergeExistingSample() {
+            var api = new NapierClient();
+            MergeSpecification mergeResources = new MergeSpecification();
+
+            var winner = "<WINNERID>";
+            var loser1 = "<LOSERID1>";
+            var loser2 = "<LOSERID2>";
+
+            mergeResources.WinnerId = winner;
+            mergeResources.IdsToMerge = new[] { loser1, loser2 };
+            var mergeResponse = api.MergeExisting("Contact", new[] { mergeResources }, null);
+            if (mergeResponse.BatchCompleted) {
+                foreach (var result in mergeResponse.Results) {
+                    if (result.OperationSucceeded) {
+                        Console.WriteLine("The following resources attempted to merged into {0}:", result.WinnerId);
+
+                        foreach (var operationResult in result.Results) {
+                            Console.Write("Id: {0}. Result: ", operationResult.Id);
+                            if (operationResult.OperationSucceeded) {
+                                Console.WriteLine("Success");
+                            }
+                            else {
+                                Console.WriteLine("Failed");
+                            }
+                        }
+                    }
+                    else {
+                        Console.WriteLine("The specified resource could not be merged.");
+                        Console.WriteLine(result.ErrorString + " " + result.ErrorMessage);
+                    }
+                }
+            }
+            else {
+                Console.WriteLine("The operation could not be performed.");
+                Console.WriteLine(mergeResponse.ErrorMessage);
+            }
+        }
+
         public void GetServerTimestamp() {
             var api = new NapierClient();
             var timestampResponse = api.GetServerTimestamp();
